@@ -24,7 +24,7 @@ export default class SearchApp extends Component {
         <div id="header" className="header">
           <div className="container">
             <div className="row">
-              <div className="col-md-6 col-md-offset-3 search-bar-content">
+              <div className="col-md-6 col-md-offset-3">
                 <SearchInput actions={actions} status={this.props.status} />
               </div>
             </div>

@@ -6,7 +6,7 @@ export default class SearchInput extends Component {
     actions: PropTypes.object,
     status: PropTypes.string,
   };
-  
+
   // handle enter key events
   searchEnter(e) {
     if (e.keyCode === 13) {
@@ -23,7 +23,7 @@ export default class SearchInput extends Component {
 
   render() {
     return (
-      <div>  
+      <div>
         <div className="form-group">
           <input onKeyDown={this.searchEnter.bind(this)} type="text" ref="tag" className="form-control input-lg search-bar" placeholder="Enter the search zone..." />
           <button onClick={this.searchClick.bind(this)} type="button" className="btn btn-default search-button">Search!</button>

@@ -34,7 +34,6 @@ export default class PhotoLightbox extends Component {
   }
 
   render() {
-    // var lightbox = '';
     mainSrcUrl = `http://farm${this.props.photos[this.state.index].farm}.staticflickr.com/${this.props.photos[this.state.index].server}/${this.props.photos[this.state.index].id}_${this.props.photos[this.state.index].secret}_b.jpg`;
     nextSrcUrl = `http://farm${this.props.photos[this.state.index].farm}.staticflickr.com/${this.props.photos[this.state.index].server}/${this.props.photos[this.state.index].id}_${this.props.photos[this.state.index].secret}_b.jpg`;
     prevSrcUrl = `http://farm${this.props.photos[this.state.index].farm}.staticflickr.com/${this.props.photos[this.state.index].server}/${this.props.photos[this.state.index].id}_${this.props.photos[this.state.index].secret}_b.jpg`;

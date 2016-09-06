@@ -1,5 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import Lightbox from 'react-image-lightbox';
+let showLightbox = false;
+let lightbox = '';
+let mainSrcUrl = '';
+let nextSrcUrl = '';
+let prevSrcUrl = '';
 
 export default class PhotoLightbox extends Component {
   static propTypes = {
@@ -16,7 +21,7 @@ export default class PhotoLightbox extends Component {
 
   closeLightbox() {
     this.setState({ isOpen: false });
-    var showLightbox = this.state.isOpen;
+    showLightbox = this.state.isOpen;
     this.props.callbackParent(showLightbox);
   }
 
@@ -29,10 +34,10 @@ export default class PhotoLightbox extends Component {
   }
 
   render() {
-    var lightbox = '';
-    var mainSrcUrl = `http://farm${this.props.photos[this.state.index].farm}.staticflickr.com/${this.props.photos[this.state.index].server}/${this.props.photos[this.state.index].id}_${this.props.photos[this.state.index].secret}_b.jpg`
-    var nextSrcUrl = `http://farm${this.props.photos[this.state.index].farm}.staticflickr.com/${this.props.photos[this.state.index].server}/${this.props.photos[this.state.index].id}_${this.props.photos[this.state.index].secret}_b.jpg`
-    var prevSrcUrl = `http://farm${this.props.photos[this.state.index].farm}.staticflickr.com/${this.props.photos[this.state.index].server}/${this.props.photos[this.state.index].id}_${this.props.photos[this.state.index].secret}_b.jpg`
+    // var lightbox = '';
+    mainSrcUrl = `http://farm${this.props.photos[this.state.index].farm}.staticflickr.com/${this.props.photos[this.state.index].server}/${this.props.photos[this.state.index].id}_${this.props.photos[this.state.index].secret}_b.jpg`;
+    nextSrcUrl = `http://farm${this.props.photos[this.state.index].farm}.staticflickr.com/${this.props.photos[this.state.index].server}/${this.props.photos[this.state.index].id}_${this.props.photos[this.state.index].secret}_b.jpg`;
+    prevSrcUrl = `http://farm${this.props.photos[this.state.index].farm}.staticflickr.com/${this.props.photos[this.state.index].server}/${this.props.photos[this.state.index].id}_${this.props.photos[this.state.index].secret}_b.jpg`;
     if (this.state.isOpen) {
       lightbox = (
         <Lightbox

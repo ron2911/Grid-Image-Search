@@ -34,7 +34,7 @@ export default class PhotoList extends Component {
   closeLightbox(newState) {
     this.setState({
       showLightbox: newState,
-    })
+    });
   }
 
   render() {
@@ -66,7 +66,7 @@ export default class PhotoList extends Component {
             }
           })()
         }
-        {this.state.showLightbox ? 
+        {this.state.showLightbox ?
           <PhotoLightbox callbackParent={this.closeLightbox.bind(this)} index={this.state.index} photos={this.state.photos} showLightbox={this.state.showLightbox}/> :
           null
         }

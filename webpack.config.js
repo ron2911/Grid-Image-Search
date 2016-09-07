@@ -7,7 +7,6 @@ module.exports = {
   ],
   resolve: {
     extensions: ['', '.js', '.json'],
-    modulesDirectories: ["./node_modules", "./node_modules/babel"]
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -23,7 +22,11 @@ module.exports = {
       {
         test: /\.js?$/,
         loaders: ['babel'],
+        exclude: /(node_modules|bower_components)/,
         include: path.join(__dirname, 'src'),
+        query: {
+          presets: ['es2015']
+        }
       },
     ],
   },

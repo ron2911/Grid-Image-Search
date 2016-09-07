@@ -22,8 +22,15 @@ module.exports = {
       },
       {
         test: /\.js?$/,
-        loaders: ['./node_modules/babel'],
+        loaders: ['babel'],
         include: path.join(__dirname, 'src'),
+        query: {
+          presets: [
+              'babel-loader',
+              'babel-core',
+              'babel-eslint'
+          ].map(require.resolve)
+        }
       },
     ],
   },

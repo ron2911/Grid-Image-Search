@@ -22,9 +22,8 @@ module.exports = {
       },
       {
         test: /\.js?$/,
-        loaders: ['./babel'],
+        loaders: ['./node_modules/babel'],
         include: path.join(__dirname, 'src'),
-        exclude: './node_modules',
       },
     ],
   },

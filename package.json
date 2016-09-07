@@ -32,8 +32,8 @@
     "eslint-config-airbnb": "^0.1.0",
     "eslint-plugin-react": "^3.6.3",
     "style-loader": "^0.12.4"
-  },
-  "babel": {
-    "stage": 0
   }
+  // "babel": {
+  //   "stage": 0
+  // }
 }

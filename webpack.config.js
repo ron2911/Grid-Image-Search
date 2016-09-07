@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         test: /\.js?$/,
-        loaders: ['babel?presets[]=es2015,presets[]=stage-0,presets[]=react,plugins[]=transform-runtime'],
+        loaders: ['babel'],
         exclude: /(node_modules|bower_components)/,
         include: path.join(__dirname, 'src'),
       },

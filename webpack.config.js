@@ -24,6 +24,9 @@ module.exports = {
         loaders: ['babel'],
         exclude: /(node_modules|bower_components)/,
         include: path.join(__dirname, 'src'),
+        query: {
+          presets: ['es2015', 'react']
+        }
       },
     ],
   },

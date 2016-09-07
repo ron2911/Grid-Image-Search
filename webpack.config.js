@@ -5,6 +5,10 @@ module.exports = {
   entry: [
     './src/index',
   ],
+  resolve: {
+    extensions: ['', '.js', '.json'],
+    modulesDirectories: ["./node_modules", "./node_modules/babel"]
+  },
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -27,8 +31,5 @@ module.exports = {
     new webpack.ProvidePlugin({
       'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch',
     }),
-  ],
-  resolve: {
-    extensions: ['', '.js', '.json'],
-  },
+  ]
 };

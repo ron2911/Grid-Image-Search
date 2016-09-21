@@ -17,4 +17,9 @@ npm start
 open http://localhost:3000
 ```
 
+This project is also live and deployed on Heroku. 
+```
+grid-image-search.herokuapp.com
+```
+
 Have fun!!!
